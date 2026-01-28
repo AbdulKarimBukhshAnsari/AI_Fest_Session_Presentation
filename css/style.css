@@ -192,6 +192,83 @@ h2.sub-title {
     transform: skewX(-20deg);
 }
 
+/* Strategy List (Slide 3) */
+.strategy-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.strategy-list li {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.strategy-bullet {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(180deg, #a8ff78 0%, #78ffd6 100%); /* Green gradient */
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(168, 255, 120, 0.3);
+    flex-shrink: 0;
+}
+
+/* Tech Graphic (Right side of Slide 3) */
+.tech-graphic {
+    position: relative;
+    width: 400px; /* Force width */
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.planet-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #0083B0, #00B4DB);
+    opacity: 0.2;
+    box-shadow: inset 0 0 50px rgba(0, 242, 255, 0.3);
+    border: 1px solid rgba(0, 242, 255, 0.2);
+    /* Tech grid overlay */
+    background-image: 
+        radial-gradient(circle at 30% 30%, transparent 60%, rgba(0, 242, 255, 0.1) 100%),
+        linear-gradient(rgba(0, 242, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 242, 255, 0.1) 1px, transparent 1px);
+    background-size: 100% 100%, 40px 40px, 40px 40px;
+}
+
+.floating-chip {
+    position: absolute;
+    left: -30px;
+    background: linear-gradient(180deg, #a8ff78 0%, #78ffd6 100%);
+    padding: 2rem;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 10px 40px rgba(120, 255, 214, 0.3);
+    color: #053d2b;
+    z-index: 2;
+    animation: float 6s ease-in-out infinite;
+}
+
+.floating-chip i {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.floating-chip span {
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
 /* Utilities */
 .text-col { flex: 1; }
 .image-col { flex: 0 0 320px; }
